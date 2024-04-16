@@ -2,12 +2,12 @@
 import Login from "./pages/Login"
 import Home from "./pages/Home"
 
-  // Router
-  import {
-    BrowserRouter as Router,
-    Routes,
-    Route
-  } from "react-router-dom"
+// Router
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
 
   function App() {
 

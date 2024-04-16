@@ -4,6 +4,7 @@ import { useState } from "react"
 // React router
 import { Link } from "react-router-dom"
 
+
 // React icons
 import { FaEye } from "react-icons/fa"
 import { FaEyeSlash } from "react-icons/fa"
@@ -41,13 +42,17 @@ const Login = () => {
         })
         .then((response) => {
             if(response.data.token) {
-                window.location.assign("/")
+                if(response.data.user.role === "admin") {
+                    window.location.assign("/dashboard/admin")
+                } else if (response.data.user.role === "employee") {
+                    window.location.assign("/dashboard/employee")
+                }
             } else {
-                setFormStatus(response.data)
+                setFormStatus("Impossible de procéder à la redirection")
             }
         })  
         .catch((error) => {
-            console.log(error)
+            setFormStatus("Impossible de procéder à la redirection, problème serveur")
         })
     }
 
