@@ -1,0 +1,714 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: #ececec;
+}
+
+.container {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-md {
+  max-width: 1200px;
+}
+
+.call-to-action {
+  background: #b15c17;
+  font-family: "Open Sans", sans-serif;
+  color: #fffffa;
+  padding: 10px 20px;
+  transition: 0.3s ease-in-out;
+}
+.call-to-action:hover {
+  cursor: pointer;
+  background: #844511;
+}
+
+#mainNav {
+  width: 100%;
+  height: 70px;
+  overflow-y: hidden;
+  background: #363536;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 20px;
+  z-index: 199;
+}
+#mainNav #navItems {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#mainNav #navItems a {
+  color: #fffffa;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+#mainNav #navItems button {
+  display: flex;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fffffa;
+}
+#mainNav #navItems button:hover {
+  cursor: pointer;
+}
+
+#navMenu {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fffffa;
+  position: fixed;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  top: 0px;
+  left: -105vw;
+  box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.44);
+  z-index: 200;
+}
+#navMenu button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2rem;
+  display: flex;
+  border: none;
+  background: none;
+  color: #363536;
+}
+#navMenu button:hover {
+  cursor: pointer;
+}
+#navMenu li {
+  margin: 30px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navMenu li a {
+  font-family: "Open Sans", sans-serif;
+  color: #363536;
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  font-weight: 700;
+}
+#navMenu li a svg {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+#navMenu li a:hover {
+  cursor: pointer;
+  color: #1c1c1c;
+}
+
+.nav-active {
+  left: 0 !important;
+}
+
+#home h2 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin: 40px 0px;
+}
+#home header {
+  width: 100%;
+  height: 600px;
+  background: url("../img/home-header.jpg");
+  background-position: center;
+  background-size: cover;
+  color: #fffffa;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+#home header h1, #home header p, #home header a {
+  margin: 10px 0px;
+}
+#home header h1 {
+  max-width: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.2rem, 7vw, 3rem);
+}
+#home header h1 span {
+  color: #f57c19;
+}
+#home header p {
+  font-family: "Open Sans", sans-serif;
+  max-width: 500px;
+  text-align: justify;
+}
+#home .services {
+  color: #363536;
+  padding: 0px 20px 60px;
+}
+#home .services ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
+#home .services ul li {
+  padding: 20px;
+  background: #fffffa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+  border-radius: 10px;
+  margin: 20px 0px;
+}
+#home .services ul li svg {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+#home .services ul li strong {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  text-align: center;
+}
+#home .about {
+  margin: auto;
+  background: #363536;
+  width: 100%;
+  height: auto;
+  padding: 40px 20px;
+  color: #ececec;
+}
+#home .about h2 {
+  margin: 0px 0px 20px;
+}
+#home .about p, #home .about li {
+  font-family: "Open Sans", sans-serif;
+  text-align: justify;
+}
+#home .about h3, #home .about strong, #home .about h2 {
+  font-family: "Montserrat", sans-serif;
+}
+#home .about h3, #home .about strong {
+  color: #f57c19;
+}
+#home .about p, #home .about li, #home .about ul, #home .about h3 {
+  margin: 20px 0px;
+}
+#home .cars {
+  padding: 40px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home .cars h2 {
+  margin: 0px 0px 40px;
+  color: #363536;
+}
+#home .cars .desc {
+  font-family: "Open Sans", sans-serif;
+  color: #363536;
+  text-align: center;
+}
+#home .cars .latest-cars {
+  padding: 20px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home .cars .latest-cars .latest-car {
+  background: #fffffa;
+  margin: 20px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+#home .cars .latest-cars .latest-car .car-image {
+  align-self: center;
+  width: 100%;
+  height: 220px;
+}
+#home .cars .latest-cars .latest-car .car-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+#home .cars .latest-cars .latest-car h3, #home .cars .latest-cars .latest-car p, #home .cars .latest-cars .latest-car a {
+  margin: 10px 0px;
+}
+#home .cars .latest-cars .latest-car h3 {
+  color: #f57c19;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+#home .cars .latest-cars .latest-car p {
+  color: #363536;
+  font-family: "Open Sans", sans-serif;
+}
+#home .cars .latest-cars .latest-car p strong {
+  font-family: "Montserrat", sans-serif;
+}
+#home .cars .latest-cars .latest-car a {
+  font-family: "Open Sans", sans-serif;
+  color: #fffffa;
+  background: #f57c19;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 20px;
+  align-self: center;
+  transition: 0.3s ease-in-out;
+}
+#home .cars .latest-cars .latest-car a:hover {
+  background: #b15c17;
+}
+#home .reviews {
+  width: 100%;
+  padding: 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#home .reviews h2 {
+  margin: 20px 0px;
+  color: #363536;
+}
+#home .reviews .review {
+  background: #fffffa;
+  margin: 20px 0px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+#home .reviews .review div {
+  margin: 10px 0px;
+  font-family: "Open Sans", sans-serif;
+  color: #363536;
+}
+#home .reviews .review div .star {
+  color: #ffd900;
+  font-size: 1.5rem;
+}
+#home .reviews .review .review-date {
+  font-weight: bold;
+  font-family: "Merriweather", serif;
+}
+#home .reviews form {
+  background: #fffffa;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+#home .reviews form .form-item {
+  display: flex;
+  flex-direction: column;
+}
+#home .reviews form .form-item label {
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+  color: #363536;
+}
+#home .reviews form .form-item textarea {
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  resize: none;
+  height: 200px;
+  margin-bottom: 20px;
+}
+#home .reviews form .submit {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background: #f57c19;
+  font-family: "Open Sans", sans-serif;
+  color: #fffffa;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+  margin-bottom: 20px;
+}
+#home .reviews form .submit:hover {
+  cursor: pointer;
+  background: #d26309;
+}
+
+#login {
+  padding: 70px 20px;
+}
+#login h1 {
+  margin: 40px 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #363536;
+  text-align: center;
+}
+#login p {
+  margin: 10px 0px;
+  font-family: "Open Sans", sans-serif;
+}
+#login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0px 20px;
+  max-width: 400px;
+}
+#login form .form-item {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#login form .form-item .label-box {
+  font-family: "Open Sans", sans-serif;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+#login form .form-item .password-box {
+  display: flex;
+  position: relative;
+}
+#login form .form-item .password-box button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background: none;
+}
+#login form .form-item .password-box button:hover {
+  cursor: pointer;
+}
+#login form .form-item input {
+  width: 100%;
+  font-size: 1rem;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+#login form button {
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+}
+#login form a {
+  color: #b15c17;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease-in-out;
+}
+#login form a:hover {
+  color: #844511;
+}
+
+#cars {
+  padding: 90px 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #363536;
+}
+#cars h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+#cars .desc {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+#cars .form-container form {
+  margin: auto;
+}
+#cars .form-container form .form-item {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+#cars .form-container form .form-item div {
+  margin: 5px 0px;
+}
+#cars .form-container form .form-item label {
+  font-weight: bold;
+  margin: 5px 0px;
+}
+#cars .form-container form .form-item select, #cars .form-container form .form-item input {
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+  max-width: 200px;
+}
+#cars .form-container form .buttons {
+  padding: 10px 0px;
+}
+#cars .form-container form .buttons button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  border: none;
+  background: #f57c19;
+  color: #fffffa;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+  margin-right: 10px;
+}
+#cars .form-container form .buttons button:hover {
+  cursor: pointer;
+  background: #b15c17;
+}
+#cars .searched-cars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+  padding: 40px 20px;
+}
+#cars .searched-cars .car-card {
+  background: #fffffa;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #363536;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.19);
+}
+#cars .searched-cars .car-card .image-container {
+  margin: 20px;
+  width: 100%;
+  height: 250px;
+}
+#cars .searched-cars .car-card ul {
+  width: 100%;
+}
+#cars .searched-cars .car-card ul li {
+  margin: 5px 0px;
+}
+
+#adminPannel, #employeePannel {
+  padding: 80px 20px;
+  color: #363536;
+}
+#adminPannel h1, #adminPannel .display-email, #employeePannel h1, #employeePannel .display-email {
+  margin: 20px 0px;
+}
+#adminPannel h1, #employeePannel h1 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+#adminPannel .display-email, #employeePannel .display-email {
+  font-family: "Open Sans", sans-serif;
+}
+#adminPannel .accordion, #employeePannel .accordion {
+  width: 100%;
+  max-width: 700px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 20px;
+}
+#adminPannel .accordion h2, #employeePannel .accordion h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #363536;
+}
+#adminPannel .accordion form, #employeePannel .accordion form {
+  display: flex;
+  flex-direction: column;
+}
+#adminPannel .accordion form input, #adminPannel .accordion form p, #adminPannel .accordion form button, #employeePannel .accordion form input, #employeePannel .accordion form p, #employeePannel .accordion form button {
+  margin: 10px 0px;
+}
+#adminPannel .accordion form p, #employeePannel .accordion form p {
+  background: #363536;
+  font-size: 0.9rem;
+  padding: 10px;
+  color: #fffffa;
+}
+#adminPannel .accordion form select, #adminPannel .accordion form option, #employeePannel .accordion form select, #employeePannel .accordion form option {
+  font-family: "Open Sans", sans-serif;
+  padding: 5px;
+}
+#adminPannel .accordion form input, #employeePannel .accordion form input {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  width: 100%;
+}
+#adminPannel .accordion form button:hover, #employeePannel .accordion form button:hover {
+  cursor: pointer;
+}
+#adminPannel .accordion form textarea, #employeePannel .accordion form textarea {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  max-width: 270px;
+  max-height: 300px;
+  padding: 5px;
+}
+#adminPannel .accordion form .submit, #employeePannel .accordion form .submit {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  background: #f57c19;
+  font-family: "Open Sans", sans-serif;
+  color: #fffffa;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  align-self: center;
+}
+#adminPannel .accordion form .submit:hover, #employeePannel .accordion form .submit:hover {
+  cursor: pointer;
+  background: #d26309;
+}
+#adminPannel .accordion form .form-item, #employeePannel .accordion form .form-item {
+  display: flex;
+  flex-direction: column;
+}
+#adminPannel .accordion form .form-item label, #employeePannel .accordion form .form-item label {
+  font-weight: bold;
+}
+#adminPannel .accordion .time-picker input, #employeePannel .accordion .time-picker input {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+footer {
+  background: #363536;
+  color: #fffffa;
+  padding: 40px 20px !important;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+}
+footer h3 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+footer .social-networks {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  align-items: center;
+}
+footer .social-networks button {
+  border: none;
+  background: none;
+  color: #f57c19;
+  font-size: 2rem;
+  transition: 0.3s ease-in-out;
+}
+footer .social-networks button:hover {
+  cursor: pointer;
+  color: #b15c17;
+}
+
+@media screen and (min-width: 650px) {
+  #home > .services > ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+  }
+  #home > .services > ul li {
+    margin: 0px;
+  }
+  #home .reviews-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  #home .reviews-list .review {
+    margin-bottom: 0px;
+    min-width: 300px;
+  }
+  #cars h2 {
+    text-align: center;
+  }
+  .form-container {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 900px) {
+  #navMenu {
+    max-width: 300px;
+  }
+  #cars .form-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #cars .form-container form .buttons {
+    grid-column: 1/3;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #home > .services > ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  #home .cars {
+    padding-bottom: unset;
+  }
+  #home .cars .latest-cars {
+    flex-direction: row;
+    gap: 15px;
+    padding-bottom: unset;
+  }
+  #home .cars .latest-cars .latest-car {
+    margin-bottom: unset;
+  }
+  #home .reviews-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #cars .form-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #cars .form-container form .buttons button {
+    height: 40px;
+  }
+}/*# sourceMappingURL=App.css.map */
