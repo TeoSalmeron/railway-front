@@ -9,14 +9,14 @@ import { FaEye } from "react-icons/fa"
 import { FaEyeSlash } from "react-icons/fa"
 
 // React auth kit
-import useSignIn from "react-auth-kit/hooks/useSignIn"
+// import useSignIn from "react-auth-kit/hooks/useSignIn"
 
 // Axios
 import axios from "axios"
 
 const Login = () => {
     // React auth kit
-    const signIn = useSignIn()
+    // const signIn = useSignIn()
 
     // Email
     const [email, setEmail] = useState("")
@@ -32,8 +32,6 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
 
-        console.log(process.env.REACT_APP_API_URL + "/login")
-
         axios.post(process.env.REACT_APP_API_URL + "/login", {
             email: email,
             password: password
@@ -43,28 +41,13 @@ const Login = () => {
         })
         .then((response) => {
             if(response.data.token) {
-                signIn({
-                    auth: {
-                        token: response.data.token,
-                        type: "Bearer",
-                        
-                    },
-                    userState: {
-                        id: response.data.user.id,
-                        email: response.data.user.email
-                    }
-                })
-                if(response.data.user.role === "admin") {
-                    window.location.assign("/")
-                } else if (response.data.user.role === "employee") {
-                    window.location.assign("/")
-                }
+                window.location.assign("/")
             } else {
                 setFormStatus(response.data)
             }
         })  
         .catch((error) => {
-            setFormStatus(error.response.data)
+            console.log(error)
         })
     }
 
