@@ -52,7 +52,7 @@ const Login = () => {
             }
         })  
         .catch((error) => {
-            setFormStatus("Impossible de procéder à la redirection, problème serveur")
+            setFormStatus(error.response.data)
         })
     }
 
