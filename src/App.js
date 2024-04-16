@@ -1,26 +1,38 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+// Pages
+import Login from "./pages/Login"
+import Home from "./pages/Home"
+
+// React auth kit
+import createStore from 'react-auth-kit/createStore'
+import AuthProvider from 'react-auth-kit'
+
+// Router
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom"
+
+const store = createStore({
+  authName:'_auth',
+  authType:'cookie',
+  cookieDomain: window.location.hostname,
+  cookieSecure: window.location.protocol === 'https:',
+})
 
 function App() {
-  const [users, setUsers] = useState([])
-  useEffect(() => {
-    axios.get(process.env.REACT_APP_API_URL)
-    .then((response) => {
-      setUsers(response.data)
-    }) 
-    .catch((err) => {
-      console.log(err.response)
-    })
-  }, [])
 
   return (
-    <div className="App">
-      {users.map((user) => (
-        <div key={user.id}>
-          {user.email} <br/>
-        </div>
-      ))}
-    </div>
+    <AuthProvider
+      store={store}
+    >
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/login" element={<Login />}/>
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 
