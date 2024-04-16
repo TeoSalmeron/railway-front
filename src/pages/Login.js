@@ -55,9 +55,9 @@ const Login = () => {
                     }
                 })
                 if(response.data.user.role === "admin") {
-                    window.location.assign("/dashboard/admin")
+                    window.location.assign("/")
                 } else if (response.data.user.role === "employee") {
-                    window.location.assign("/dashboard/employee")
+                    window.location.assign("/")
                 }
             } else {
                 setFormStatus(response.data)
