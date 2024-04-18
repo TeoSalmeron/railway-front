@@ -9,15 +9,10 @@ import { Link } from "react-router-dom"
 import { FaEye } from "react-icons/fa"
 import { FaEyeSlash } from "react-icons/fa"
 
-// React auth kit
-// import useSignIn from "react-auth-kit/hooks/useSignIn"
-
 // Axios
 import axios from "axios"
 
 const Login = () => {
-    // React auth kit
-    // const signIn = useSignIn()
 
     // Email
     const [email, setEmail] = useState("")

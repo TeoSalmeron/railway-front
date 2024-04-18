@@ -2,9 +2,10 @@
 import Login from "./pages/Login"
 import Home from "./pages/Home"
 import DashboardAdmin from "./pages/DashboardAdmin"
-
+import Logout from "./pages/Logout"
 // Components
 import ProtectedRoute from "./components/ProtectedRoute"
+import Nav from "./components/Nav"
 
 // Router
 import {
@@ -17,9 +18,11 @@ import {
 
     return (
       <Router>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/logout" element={<Logout />}/>
           <Route path="/dashboard/admin" element={
             <ProtectedRoute>
               <DashboardAdmin />
