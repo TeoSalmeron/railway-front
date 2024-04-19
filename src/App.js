@@ -13,6 +13,7 @@ import {
   Routes,
   Route
 } from "react-router-dom"
+import DashboardEmployee from "./pages/DashboardEmployee"
 
   function App() {
 
@@ -26,6 +27,11 @@ import {
           <Route path="/dashboard/admin" element={
             <ProtectedRoute>
               <DashboardAdmin />
+            </ProtectedRoute>
+          }/>
+          <Route path="/dashboard/employee" element={
+            <ProtectedRoute>
+              <DashboardEmployee />
             </ProtectedRoute>
           }/>
         </Routes>
