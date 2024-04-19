@@ -528,51 +528,69 @@ body {
     }
 }
 
+// CARS //
+
 #cars {
     padding: 90px 20px;
     font-family: $body;
     color: $color3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .container-md {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: $header;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
     
-    h1 {
-        font-family: $header;
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
+        .desc {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
 
-    .desc {
-        text-align: justify;
-        margin-bottom: 20px;
-    }
-
-    .form-container {
+        h2 {
+            text-align: center;
+        }
+    
+    
         form {
-            margin: auto;
-            // max-width: 500px;
-
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+    
             .form-item {
                 width: 100%;
                 margin: 10px 0px;
                 display: flex;
                 flex-direction: column;
-
+    
                 div {
                     margin: 5px 0px;
                 }
-
+    
                 label {
                     font-weight: bold;
                     margin: 5px 0px;
                 }
-
+    
                 select, input {
                     padding: 5px;
                     font-family: $body;
                     max-width: 200px;
                 }
             }
-
+    
             .buttons {
+                display: flex;
+                justify-content: center;
                 padding: 10px 0px;
                         
                 button {
@@ -591,44 +609,46 @@ body {
                 }
             }
         }
-    }
-
-    .searched-cars {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        gap: 30px;
-        padding: 40px 20px;  
-
-        .car-card {
-            background: $white;
-            padding: 20px;
+        
+    
+        .searched-cars {
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: $color3;
-            border-radius: 10px;
-            max-width: 500px;
-            width: 100%;
-            -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.19); 
-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.19);
-
-            .image-container {
-                margin: 20px;
+            justify-content: space-evenly;
+            gap: 30px;
+            padding: 40px 20px;  
+    
+            .car-card {
+                background: $white;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: $color3;
+                border-radius: 10px;
+                max-width: 500px;
                 width: 100%;
-                height: 250px;
-            }    
-
-            ul {
-                width: 100%;
-
-                li {
-                    margin: 5px 0px;
+                -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.19); 
+                box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.19);
+    
+                .image-container {
+                    margin: 20px;
+                    width: 100%;
+                    height: 250px;
+                }    
+    
+                ul {
+                    width: 100%;
+    
+                    li {
+                        margin: 5px 0px;
+                    }
                 }
             }
         }
     }
+    
 }
 
 // ADMIN PANNEL //
@@ -808,25 +828,11 @@ footer {
     #cars h2 {
         text-align: center;
     }
-
-    .form-container {
-        display: flex;
-        align-items: center;
-    }
 }
 
 @media screen and (min-width: 900px) {
     #navMenu {
         max-width: 300px;
-    }
-
-    #cars .form-container form {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-
-        .buttons {
-            grid-column: 1/3;
-        }
     }
 }
 
@@ -854,17 +860,5 @@ footer {
     #home .reviews-list {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
-    #cars .form-container form {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-
-        .buttons {
-            button {
-                height: 40px;
-            }
-        }
-    }
-
-    
+   
 }

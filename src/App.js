@@ -2,6 +2,7 @@
 import Login from "./pages/Login"
 import Home from "./pages/Home"
 import DashboardAdmin from "./pages/DashboardAdmin"
+import Cars from "./pages/Cars"
 import Logout from "./pages/Logout"
 // Components
 import ProtectedRoute from "./components/ProtectedRoute"
@@ -24,6 +25,7 @@ import DashboardEmployee from "./pages/DashboardEmployee"
           <Route path="/" element={<Home />}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/logout" element={<Logout />}/>
+          <Route path="/cars" element={<Cars />} />
           <Route path="/dashboard/admin" element={
             <ProtectedRoute>
               <DashboardAdmin />
