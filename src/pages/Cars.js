@@ -196,6 +196,7 @@ const Cars = () => {
             .then((response) => {
                 if(!response.data.results) {
                     setFormStatus(response.data.message)
+                    setQueryResponse({})
                 } else {
                     setQueryResponse(response.data.results)
                 }
